@@ -10,7 +10,7 @@ config :gm_players, GmPlayers.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "6Z5rB4fIOLha0Cq3jrDqqcKyn+sB80B9dYBgZkO4SFl/i1lrOgZ8S0cXNQx6fTR3",
-  render_errors: [accepts: ~w(html json)],
+  render_errors: [accepts: ~w(json)],
   pubsub: [name: GmPlayers.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

@@ -5,11 +5,10 @@ defmodule GmPlayers.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", GmPlayers do
+  scope "/api", GmPlayers do
     pipe_through :api
 
-    scope "/v1", V1, as: :v1 do
-      resources "/players", PlayerController
-    end
+    get "/players", PlayerController, :index
+    get "/players/:id", PlayerController, :show
   end
 end
