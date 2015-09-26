@@ -17,7 +17,14 @@ defmodule GmPlayers.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {GmPlayers, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger]]
+     applications: [
+       :phoenix,
+       :phoenix_html,
+       :cowboy,
+       :logger,
+       :ex_aws,
+       :httpoison
+     ]]
   end
 
   # Specifies which paths to compile per environment
@@ -31,6 +38,9 @@ defmodule GmPlayers.Mixfile do
     [{:phoenix, "~> 1.0.2"},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:ex_aws, "0.4.8"}, # "~> 0.4.10"
+     {:poison, "~> 1.2"},
+     {:httpoison, "~> 0.7"}]
   end
 end
