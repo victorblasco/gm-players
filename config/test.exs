@@ -11,3 +11,7 @@ config :logger, level: :warn
 
 # Set a higher stacktrace during test
 config :phoenix, :stacktrace_depth, 20
+
+# DynamoDB setings
+config :dynamo_db,
+players: "gm-players.players.test"

@@ -11,7 +11,7 @@ defmodule GmPlayers.PlayerView do
 
   def render("player.json", %{player: player}) do
     %{
-      id: player.id,
+      id: player.player_id,
       public_name: player.public_name
     }
   end
