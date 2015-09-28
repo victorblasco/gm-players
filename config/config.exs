@@ -23,8 +23,8 @@ config :logger, :console,
 config :ex_aws,
   access_key_id: [{:system, "AWS_ACCESS_KEY_ID"}, :instance_role],
   secret_access_key: [{:system, "AWS_SECRET_ACCESS_KEY"}, :instance_role],
-  dynamodb: [region: "us-west-2",
-             host: "dynamodb.us-west-2.amazonaws.com",
+  dynamodb: [region: "eu-west-1",
+             host: "dynamodb.eu-west-1.amazonaws.com",
              scheme: "https://",
              port: 80]
 
