@@ -39,7 +39,8 @@ defmodule GmPlayers.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:ex_aws, "0.4.8"}, # "~> 0.4.10"
+     {:sweet_xml, "~> 0.2.1"}, # ex_aws dependency
+     {:ex_aws, "~> 0.4.10"},
      {:poison, "~> 1.2"},
      {:httpoison, "~> 0.7"}]
   end
