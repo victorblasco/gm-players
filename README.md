@@ -1,4 +1,4 @@
-# Golden Manager Players app
+# Golden Manager Players app [![Build Status](https://travis-ci.org/victorblasco/gm-players.svg)](https://travis-ci.org/victorblasco/gm-players)
 
 ## Dependencies
 
