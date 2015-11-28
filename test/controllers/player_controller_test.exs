@@ -1,8 +1,16 @@
 defmodule GmPlayers.PlayerControllerTest do
-  use GmPlayers.ConnCase
+  use ExUnit.Case, async: true
+  use Plug.Test
 
   test "GET /" do
-    conn = get conn(), "/api/players"
-    assert html_response(conn, 200) =~ "Players#index"
+    response = conn(:get, "/api/players/1") |> send_request
+
+    assert response.status == 200
+  end
+
+  defp send_request(conn) do
+    conn
+    |> put_private(:plug_skip_csrf_protection, true)
+    |> GmPlayers.Endpoint.call([])
   end
 end
